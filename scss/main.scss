@@ -1,0 +1,32 @@
+@use "../../node_modules/spices-fruitui/src/scss/basket" as * with (
+  $typography-util: true,
+  $spacing-util: true,
+  $size-util: true,
+  $align-util: true,
+  $other-util: true,
+  $flex: true
+);
+
+.hero {
+  height: calc(100vh - 60px);
+}
+
+.list {
+  list-style-type: disc;
+  line-height: 1.8;
+  p {
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+p,li {
+  @media screen and (max-width: 768px) {
+    line-height: 2.2 ;
+  }
+}
+
+@include navbarBase();
+
+@include useShades(900);

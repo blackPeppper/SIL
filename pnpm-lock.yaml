@@ -1,0 +1,13 @@
+lockfileVersion: 5.4
+
+specifiers:
+  spices-fruitui: ^0.1.3
+
+dependencies:
+  spices-fruitui: 0.1.3
+
+packages:
+
+  /spices-fruitui/0.1.3:
+    resolution: {integrity: sha512-1bnOVtqNWHoF4TRb6Gb99DSJZiegRHrxkcm0tIDiL22vpMSoYAKCtiaHn1e/qq4bJgWztU8Ygn9PxA3QLRi80w==}
+    dev: false

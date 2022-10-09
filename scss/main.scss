@@ -1,25 +1,38 @@
-@use "../../node_modules/spices-fruitui/src/scss/basket" as * with (
+@use "../node_modules/spices-fruitui/src/scss/lib/import/basket" as * with (
   $typography-util: true,
   $spacing-util: true,
-  $size-util: true,
   $align-util: true,
   $other-util: true,
-  $flex: true
-);
+  $size-util: true,
+  $flex: true,
+  $navbar: true,
+  $ui-colors: true,
+  $base: true,
+  );
+
 
 .hero {
-  height: calc(100vh - 60px);
+  // height: calc(100vh - 60px);
 }
 
-.list {
-  list-style-type: disc;
-  line-height: 1.8;
-  p {
-    margin-right: 15px;
-    margin-top: 10px;
-    margin-bottom: 30px;
+
+p, h3 {
+  line-height: 2;
+}
+
+p {
+  font-size: $font-md;
+}
+
+h3 {
+  font-size: $font-lg;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  b,span {
+    font-size: inherit !important;
   }
 }
+
 
 p,li {
   @media screen and (max-width: 768px) {
@@ -27,6 +40,5 @@ p,li {
   }
 }
 
-@include navbarBase();
 
 @include useShades(900);

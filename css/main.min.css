@@ -23,12 +23,99 @@ a {
   color: inherit;
 }
 
+img {
+  max-width: 100%;
+}
+
 
 .stage {
   width: 100%;
   margin: auto;
   padding: 0 10px;
   max-width: 1200px;
+}
+
+.flex {
+  display: flex;
+}
+.navbar {
+  z-index: 3;
+  height: 60px;
+  display: flex;
+  color: white;
+  padding: 0 16px;
+  position: relative;
+  align-items: center;
+  background-color: hsl(271deg, 81%, 56%);
+  justify-content: space-between;
+}
+.navbar .brand {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.navbar .toggle {
+  width: 30px;
+  height: 21px;
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.navbar .toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+.navbar .navbar-links {
+  display: flex;
+  list-style: none;
+  transform-origin: top;
+}
+.navbar .navbar-links li {
+  margin: 0 4px;
+}
+.navbar .navbar-links li a {
+  display: block;
+  padding: 10px;
+}
+@media screen and (max-width: 768px) {
+  .navbar .toggle {
+    display: flex;
+  }
+  .navbar .navbar-links {
+    display: none;
+  }
+  .navbar.active .navbar-links {
+    left: 0px;
+    top: 60px;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    text-align: center;
+    padding: 16px 0;
+    flex-direction: column;
+    background-color: inherit;
+    animation: navbar 300ms ease-in-out;
+  }
+  .navbar.active .toggle {
+    transform: translateX(10px);
+  }
+  .navbar.active .toggle .bar {
+    transition: all 0.4s cubic-bezier(0.43, 1.07, 0.16, 1.01);
+  }
+  .navbar.active .toggle .bar:first-child {
+    transform: rotate(45deg) translateY(13px);
+  }
+  .navbar.active .toggle .bar:nth-child(2) {
+    transform: scale(0);
+  }
+  .navbar.active .toggle .bar:last-child {
+    transform: rotate(-45deg) translateY(-13px);
+  }
 }
 
 @keyframes navbar {
@@ -38,6 +125,11 @@ a {
   100% {
     transform: scaleY(1);
   }
+}
+
+.success {
+  color: #fff !important;
+  background-color: hsl(142deg, 71%, 45%) !important;
 }
 
 .text {
@@ -64,6 +156,14 @@ a {
   font-size: 1.5rem !important;
 }
 
+.items-center {
+  align-items: center !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
 .text-center {
   text-align: center !important;
 }
@@ -81,12 +181,12 @@ h3 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-h3 b {
+h3 b, h3 span {
   font-size: inherit !important;
 }
 
 @media screen and (max-width: 768px) {
-  p {
+  p, li {
     line-height: 2.2;
   }
 }

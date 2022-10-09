@@ -32,7 +32,7 @@ document.getElementById("hero").innerHTML = `
 </nav>
 <div class="stage">
   <div class="hero">
-    <div class="flex items-center justify-center mt-12"><img src="./sil-icon.png" alt="" srcset="" loading="lazy"></div>
+    <div class="flex items-center justify-center mt-12"><img src="./SIL-icon.png" alt="" srcset="" loading="lazy"></div>
     <h1 class="h3 text-center text-gray-800">Spices Islamic License</h1>
   </div>
 </div>
